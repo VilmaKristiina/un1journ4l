@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <section id="calendar-section">
+    <div class="home-button">
+      <a href="index.html">
+        <img src="llogo.png" alt="Etusivulle" />
+      </a>
+    </div>
+
+    <!-- Tähdet -->
+    <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="star" style="top: 35%; left: 80%; animation-delay: 2s;"></div>
+    <div class="star" style="top: 70%; left: 5%; animation-delay: 4s;"></div>
+    <div class="star-small" style="top: 5%; left: 85%; animation-delay: 1s;"></div>
+    <div class="star-small" style="top: 30%; left: 8%; animation-delay: 3s;"></div>
+    <div class="star-small" style="top: 75%; left: 55%; animation-delay: 5s;"></div>
+    <div class="star-small" style="top: 85%; left: 85%; animation-delay: 6s;"></div>
+
+    <!-- Uni-kyselyn nappi -->
+    <button id="open-sleep-modal-btn">How long did you sleep?</button>
+
+    <div class="calendar-container">
+      <h2 id="month-name">May 2025</h2>
+      <div class="calendar-nav">
+        <button id="prev-days">&lt;</button>
+        <div id="calendar-days" class="calendar-days"></div>
+        <button id="next-days">&gt;</button>
+      </div>
+      <hr class="calendar-divider" />
+      <div id="journal-status" class="journal-status"></div>
+    </div>
+
+    <button id="open-journal-btn" class="open-journal-btn">Open journal</button>
+
+    <a href="#mood-section" class="scroll-btn">How are you feeling?</a>
+
+    <div class="journal-entry" id="journal-entry">
+      <h3 id="journal-date">Valitse päivä</h3>
+      <textarea id="journal-text" placeholder="Describe your dream..."></textarea>
+      <button id="save-journal">Save</button>
+    </div>
+
+    <!-- MODAALI UNI -->
+    <div id="sleep-modal">
+      <div class="modal-content">
+        <button id="close-modal" aria-label="Sulje modal">✖</button>
+        <h2>How many hours did you sleep?</h2>
+        <input
+          type="number"
+          id="sleep-input"
+          min="0"
+          max="24"
+          step="0.1"
+          placeholder="0 - 24 tuntia"
+        />
+        <button id="save-sleep">Save</button>
+        <div id="modal-message"></div>
+        <canvas id="sleep-chart"></canvas>
+
+        <!-- Päivämäärän vaihto (vain modalin sisällä) -->
+        <div class="date-switcher">
+          <button id="prev-day-btn">&larr; Previous day</button>
+          <span id="modal-date-label"></span>
+          <button id="next-day-btn">Next day &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mood-section">
+    <h2>What mood are you in?</h2>
+    <p>Choose an emoji that describes your mood today</p>
+    <div class="emoji-picker" id="emoji-picker">
+      <button class="emoji-btn" data-mood="happy">😀</button>
+      <button class="emoji-btn" data-mood="neutral">😐</button>
+      <button class="emoji-btn" data-mood="sad">😢</button>
+      <button class="emoji-btn" data-mood="angry">😠</button>
+      <button class="emoji-btn" data-mood="tired">🥱</button>
+      <button class="emoji-btn" data-mood="love">🥰</button>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Journal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Tähdet -->
+  <div class="star" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+  <div class="star" style="top: 50%; left: 70%; animation-delay: 2s;"></div>
+  <div class="star" style="top: 80%; left: 30%; animation-delay: 4s;"></div>
+  <!-- Pienet tähdet -->
+  <div class="star-small" style="top: 10%; left: 60%; animation-delay: 1s;"></div>
+  <div class="star-small" style="top: 40%; left: 80%; animation-delay: 3s;"></div>
+  <div class="star-small" style="top: 60%; left: 20%; animation-delay: 5s;"></div>
+  <div class="star-small" style="top: 90%; left: 40%; animation-delay: 7s;"></div>
+
+  <!-- Pilvet -->
+  <div class="cloud1" style="top: 70%; left: 5%; animation-delay: 1s;"></div>
+  <div class="cloud3" style="top: 75%; left: 80%; animation-delay: 5s;"></div>
+  <div class="big-cloud-container">
+    <div class="big-cloud" style="top: 0%; animation-delay: 3s;"></div>
+  </div>
+
+  <!-- Nappipainikkeet -->
+  <div class="button-container">
+    <a href="#" class="auth-button" id="login-btn">
+      <img src="login.png" alt="Kirjaudu sisään">
+    </a>
+    <a href="#" class="auth-button" id="signup-btn">
+      <img src="sign up.png" alt="Rekisteröidy">
+    </a>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="llogo.png" class="logo-image" alt="Logo">
+  </div>
+
+<!-- Kirjautumislomake -->
+<div class="form-container hidden" id="login-form">
+  <form>
+    <input type="email" placeholder="enter your email" required>
+    <input type="password" placeholder="enter your password" required>
+    <button type="submit">log in</button>
+  </form>
+</div>
+
+<!-- Rekisteröitymislomake -->
+<div class="form-container hidden" id="signup-form">
+  <form>
+    <input type="text" placeholder="enter your username" required>
+    <input type="email" placeholder="enter your email" required>
+    <input type="password" placeholder="enter your password" required>
+    <button type="submit">sign up</button>
+  </form>
+</div>
+
+<!-- Loading kuvake -->
+<div id="loading" class="hidden">
+  <img src="loading.png" alt="Loading...">
+</div>
+
+
+</body>
+</html>

@@ -311,7 +311,7 @@ saveSleepBtn.addEventListener("click", () => {
   }
   const isoDate = sleepDate.toISOString().split("T")[0];
   localStorage.setItem(`sleep-${isoDate}`, value.toString());
-  modalMessage.textContent = "Tallennettu!";
+  modalMessage.textContent = "Saved!";
   drawChart();
 });
 
